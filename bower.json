@@ -1,0 +1,32 @@
+{
+  "name": "languages.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/leighmcculloch/languages.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/leighmcculloch/languages.js.git"
+  }
+  "authors": [
+    { "name": "Leigh McCulloch", "homepage": "https://leighmcculloch.com" }
+  ],
+  "description": "A JavaScript library telling you the accepted languages of the visitor.",
+  "main": "src/language.js",
+  "moduleType": [
+    "globals",
+    "amd"
+  ],
+  "keywords": [
+    "language",
+    "i18n",
+    "hreflang",
+    "alternate"
+  ],
+  "license": "ICS",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
