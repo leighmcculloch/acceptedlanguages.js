@@ -19,7 +19,11 @@ require.config({
 });
 
 require(['jasmine-boot'], function () {
-  require(['$specs/languages-util.specs'], function () {
+  require([
+    // '$specs/languages-util.specs',
+    '$specs/languages-user.specs',
+    // '$specs/languages-page.specs'
+  ], function () {
     window.onload();
   })
 });

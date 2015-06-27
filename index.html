@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>languages.js</title>
+
+  <link rel="alternate" hreflang="pt-BR" href="..." />
+  <link rel="alternate" hreflang="es" href="..." />
+  <link rel="alternate" hreflang="en-AU" href="..." />
+  <link rel="alternate" hreflang="en" href="..." />
+
+  <script type="text/javascript" src="src/languages-util.js"></script>
+  <script type="text/javascript" src="src/languages-user.js"></script>
+  <script type="text/javascript" src="src/languages-page.js"></script>
+  <script type="text/javascript" src="src/languages.js"></script>
+</head>
+<body>
+  <h1>languages.js</h1>
+
+  <div>
+    <div>Accepted Languages:</div>
+    <div><script>document.write(languages.accepted);</script></div>
+  </div>
+
+  <div>
+    <div>Accepted Languages (expanding region specific languages):</div>
+    <div><script>document.write(languages.acceptedExpanded);</script></div>
+  </div>
+
+  <div>
+    <div>Alternate Languages this page is available in:</div>
+    <div><script>document.write(languages.alternate);</script></div>
+  </div>
+
+  <div>
+    <div>Relevant Languages:</div>
+    <div><script>document.write(languages.relevant);</script></div>
+  </div>
+</body>
+</html>
