@@ -23,5 +23,5 @@
   languages.alternateExpanded = util.expandLanguages(languages.alternate);
   languages.relevant = util.getRelevantLanguages(languages.acceptedExpanded, languages.alternateExpanded);
 
-  return Object.freeze(languages);
+  return languages;
 }));
