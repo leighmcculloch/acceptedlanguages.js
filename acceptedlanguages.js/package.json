@@ -1,0 +1,25 @@
+{
+  "name": "acceptedlanguages",
+  "version": "1.0.0",
+  "description": "A simple JavaScript library that tells you the accepted languages of the visitor configured in their browser, and the languages relevant given the languages that the current page is alternatively available in.",
+  "main": "acceptedlanguages.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leighmcculloch/languages.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leighmcculloch/languages.js/issues"
+  },
+  "homepage": "https://github.com/leighmcculloch/languages.js#readme",
+  "devDependencies": {
+    "babel-core": "^5.6.15",
+    "babel-loader": "^5.2.2",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.10.0"
+  }
+}

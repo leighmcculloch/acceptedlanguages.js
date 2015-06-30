@@ -2,18 +2,14 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>languages.js</title>
+  <title>acceptedlanguages.js</title>
 
   <link rel="alternate" hreflang="pt-BR" href="..." />
   <link rel="alternate" hreflang="es" href="..." />
   <link rel="alternate" hreflang="en-AU" href="..." />
   <link rel="alternate" hreflang="en-US" href="..." />
 
-  <script type="text/javascript" src="../languages.js/src/languages-user.js"></script>
-  <script type="text/javascript" src="../languages.js/src/languages-page.js"></script>
-  <script type="text/javascript" src="../languages.js/src/languages-util.js"></script>
-  <script type="text/javascript" src="../languages.js/src/languages-relevant.js"></script>
-  <script type="text/javascript" src="../languages.js/src/languages.js"></script>
+  <script type="text/javascript" src="../acceptedlanguages.js/dist/acceptedlanguages.js"></script>
 
   <style>.row { margin:20px 0; }</style>
 </head>
@@ -22,27 +18,27 @@
 
   <div class="row">
     <div>Accepted Languages:</div>
-    <div><script>document.write(JSON.stringify(languages.accepted));</script></div>
+    <div><script>document.write(JSON.stringify(acceptedlanguages.accepted));</script></div>
   </div>
 
   <div class="row">
     <div>Accepted Languages (expanding regions):</div>
-    <div><script>document.write(JSON.stringify(languages.acceptedExpanded));</script></div>
+    <div><script>document.write(JSON.stringify(acceptedlanguages.acceptedExpanded));</script></div>
   </div>
 
   <div class="row">
     <div>Alternate Languages of this page:</div>
-    <div><script>document.write(JSON.stringify(languages.alternate));</script></div>
+    <div><script>document.write(JSON.stringify(acceptedlanguages.alternate));</script></div>
   </div>
 
   <div class="row">
     <div>Alternate Languages of this page (expanding regions):</div>
-    <div><script>document.write(JSON.stringify(languages.alternateExpanded));</script></div>
+    <div><script>document.write(JSON.stringify(acceptedlanguages.alternateExpanded));</script></div>
   </div>
 
   <div class="row">
     <div>Relevant Languages:</div>
-    <div><script>document.write(languages.relevant);</script></div>
+    <div><script>document.write(acceptedlanguages.relevant);</script></div>
   </div>
 </body>
 </html>

@@ -1,0 +1,12 @@
+install:
+	npm install
+	bower install
+
+build:
+	${CURDIR}/node_modules/.bin/webpack --optimize-minimize --output-file=acceptedlanguages.min.js
+
+build-dev:
+	${CURDIR}/node_modules/.bin/webpack
+
+watch:
+	${CURDIR}/node_modules/.bin/webpack --watch

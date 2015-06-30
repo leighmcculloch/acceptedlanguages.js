@@ -1,10 +1,10 @@
 {
-  "name": "languages.js",
+  "name": "acceptedlanguages.js",
   "version": "0.0.1",
-  "homepage": "https://github.com/leighmcculloch/languages.js",
+  "homepage": "https://github.com/leighmcculloch/acceptedlanguages.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/leighmcculloch/languages.js.git"
+    "url": "git://github.com/leighmcculloch/acceptedlanguages.js.git"
   }
   "authors": [
     { "name": "Leigh McCulloch", "homepage": "https://leighmcculloch.com" }
