@@ -8,29 +8,18 @@
   'use strict';
 
   function expandLanguages(languages) {
-    var expanded = [];
-    var seen = {};
+    var expanded = {};
     languages.forEach(function(language){
-      if (seen[language]) return;
-      expanded.push(language);
-      seen[language] = true;
+      expanded[language] = language;
       var code = language.match(/^[a-zA-Z]+/)[0];
-      if (code != language) {
-        expanded.push(code);
-        seen[code] = true;
+      if (code != language && !expanded[code]) {
+        expanded[code] = language;
       }
     });
     return expanded;
   }
 
-  function getRelevantLanguages(acceptedLanguages, availableLanguages) {
-    return acceptedLanguages.filter(function(language) {
-      return availableLanguages.indexOf(language) !== -1;
-    });
-  }
-
   return {
-    expandLanguages: expandLanguages,
-    getRelevantLanguages: getRelevantLanguages
+    expandLanguages: expandLanguages
   };
 }));

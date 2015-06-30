@@ -3,16 +3,18 @@
     define([
       'languages-util',
       'languages-user',
-      'languages-page'
+      'languages-page',
+      'languages-relevant'
     ], factory);
   } else {
     root.languages = factory(
       root.languagesUtil,
       root.languagesUser,
-      root.languagesPage
+      root.languagesPage,
+      root.languagesRelevant
     );
   }
-}(this, function (util, user, page) {
+}(this, function (util, user, page, relevant) {
   'use strict';
 
   var languages = {};
@@ -21,7 +23,7 @@
   languages.acceptedExpanded = util.expandLanguages(languages.accepted);
   languages.alternate = page.getAlternateLanguages();
   languages.alternateExpanded = util.expandLanguages(languages.alternate);
-  languages.relevant = util.getRelevantLanguages(languages.acceptedExpanded, languages.alternateExpanded);
+  languages.relevant = relevant.getRelevantAlternateLanguages();
 
   return languages;
 }));
