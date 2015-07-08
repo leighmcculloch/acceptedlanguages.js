@@ -1,6 +1,6 @@
 # acceptedlanguages.js
 
-A simple JavaScript library that tells you the accepted languages of the visitor configured in their browser, and the languages relevant given the languages that the current page is alternatively available in.
+A simple JavaScript library that exposes the accepted languages of the visitor configured in their browser, and the languages relevant given the languages that the current page is alternatively available in.
 
 ## Usage
 
