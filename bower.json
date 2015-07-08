@@ -5,7 +5,7 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/leighmcculloch/acceptedlanguages.js.git"
-  }
+  },
   "authors": [
     { "name": "Leigh McCulloch", "homepage": "https://leighmcculloch.com" }
   ],
