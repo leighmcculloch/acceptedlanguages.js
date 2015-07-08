@@ -1,5 +1,5 @@
 {
-  "name": "acceptedlanguages.js",
+  "name": "acceptedlanguages",
   "version": "0.0.1",
   "homepage": "https://github.com/leighmcculloch/acceptedlanguages.js",
   "repository": {
@@ -9,8 +9,8 @@
   "authors": [
     { "name": "Leigh McCulloch", "homepage": "https://leighmcculloch.com" }
   ],
-  "description": "A JavaScript library telling you the accepted languages of the visitor.",
-  "main": "src/language.js",
+  "description": "A JavaScript library exposing the accepted and relevant languages of the visitor.",
+  "main": "dist/acceptedlanguages.js",
   "moduleType": [
     "globals",
     "amd"
@@ -27,6 +27,7 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "example"
   ]
 }
