@@ -1,5 +1,7 @@
 # acceptedlanguages.js
 
+[![Build Status](https://travis-ci.org/leighmcculloch/acceptedlanguages.js.svg?branch=master)](https://travis-ci.org/leighmcculloch/acceptedlanguages.js)
+
 A simple JavaScript library that exposes the accepted languages of the visitor configured in their browser, and the languages relevant given the languages that the current page is alternatively available in.
 
 ## Install

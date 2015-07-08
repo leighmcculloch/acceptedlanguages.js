@@ -4,7 +4,7 @@
   "description": "A simple JavaScript library that tells you the accepted languages of the visitor configured in their browser, and the languages relevant given the languages that the current page is alternatively available in.",
   "main": "acceptedlanguages.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/karma/bin/karma start --single-run"
   },
   "repository": {
     "type": "git",
