@@ -2,11 +2,23 @@
 
 A simple JavaScript library that exposes the accepted languages of the visitor configured in their browser, and the languages relevant given the languages that the current page is alternatively available in.
 
+## Install
+
+### Bower
+
+```bash
+bower install acceptedlangauges
+```
+
+### Manual
+
+Download [acceptedlanguages.min.js](acceptedlanguages.js/dist/acceptedlanguages.min.js).
+
 ## Usage
 
 ### Globals
 
-Include `acceptedlanguages.js` into the page and call any of the
+Include `acceptedlanguages.js` into the page and call any of the global properties.
 
 ```html
 <head>
