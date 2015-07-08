@@ -125,16 +125,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _acceptedlanguagesWindow = __webpack_require__(3);
+	var _acceptedlanguagesRoot = __webpack_require__(3);
 
-	var _acceptedlanguagesWindow2 = _interopRequireDefault(_acceptedlanguagesWindow);
+	var _acceptedlanguagesRoot2 = _interopRequireDefault(_acceptedlanguagesRoot);
 
 	function getAcceptedLanguages() {
 	  // navigator.languages:    Chrome & FF
 	  // navigator.language:     Safari & Others
 	  // navigator.userLanguage: IE & Others
-	  if (_acceptedlanguagesWindow2['default'].navigator) {
-	    return _acceptedlanguagesWindow2['default'].navigator.languages || [_acceptedlanguagesWindow2['default'].navigator.language || _acceptedlanguagesWindow2['default'].navigator.userLanguage];
+	  var root = (0, _acceptedlanguagesRoot2['default'])();
+	  if (root.navigator) {
+	    return root.navigator.languages || [root.navigator.language || root.navigator.userLanguage];
 	  } else {
 	    return [];
 	  }
@@ -151,8 +152,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports["default"] = window;
-	module.exports = exports["default"];
+	exports["default"] = getRoot;
+	exports.setRoot = setRoot;
+	var root = undefined;
+
+	function getRoot() {
+	  return root;
+	}
+
+	;
+
+	function setRoot(newRoot) {
+	  root = newRoot;
+	}
 
 /***/ },
 /* 4 */
@@ -167,12 +179,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _acceptedlanguagesWindow = __webpack_require__(3);
+	var _acceptedlanguagesRoot = __webpack_require__(3);
 
-	var _acceptedlanguagesWindow2 = _interopRequireDefault(_acceptedlanguagesWindow);
+	var _acceptedlanguagesRoot2 = _interopRequireDefault(_acceptedlanguagesRoot);
 
 	function getAlternateLanguages() {
-	  var links = _acceptedlanguagesWindow2['default'].document.querySelector('head').querySelectorAll('link[rel="alternate"]');
+	  var root = (0, _acceptedlanguagesRoot2['default'])();
+	  var links = root.document.querySelector('head').querySelectorAll('link[rel="alternate"]');
 	  var hreflangs = [];
 	  for (var i = 0; i < links.length; i++) {
 	    var link = links.item(i);
