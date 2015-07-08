@@ -12,7 +12,7 @@ bower install acceptedlangauges
 
 ### Manual
 
-Download [acceptedlanguages.min.js](acceptedlanguages.js/dist/acceptedlanguages.min.js).
+Download [acceptedlanguages.min.js](dist/acceptedlanguages.min.js).
 
 ## Usage
 
