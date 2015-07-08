@@ -1,6 +1,6 @@
 module.exports = {
   entry: {
-    acceptedlanguages: './src/acceptedlanguages.js',
+    acceptedlanguages: './src/acceptedlanguages.js'
   },
   resolve:{
     modulesDirectories: [

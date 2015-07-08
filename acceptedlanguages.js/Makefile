@@ -10,3 +10,6 @@ build-dev:
 
 watch:
 	${CURDIR}/node_modules/.bin/webpack --watch
+
+tests:
+	${CURDIR}/node_modules/karma/bin/karma start

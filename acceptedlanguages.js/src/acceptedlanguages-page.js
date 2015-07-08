@@ -1,7 +1,8 @@
-import window from 'acceptedlanguages-window';
+import getRoot from 'acceptedlanguages-root';
 
 export function getAlternateLanguages() {
-  var links = window.document.querySelector('head').querySelectorAll('link[rel="alternate"]');
+  var root = getRoot();
+  var links = root.document.querySelector('head').querySelectorAll('link[rel="alternate"]');
   var hreflangs = [];
   for (var i = 0; i < links.length; i++) {
     var link = links.item(i);

@@ -1,11 +1,12 @@
-import window from 'acceptedlanguages-window';
+import getRoot from 'acceptedlanguages-root';
 
 export function getAcceptedLanguages() {
   // navigator.languages:    Chrome & FF
   // navigator.language:     Safari & Others
   // navigator.userLanguage: IE & Others
-  if (window.navigator) {
-    return window.navigator.languages || [window.navigator.language || window.navigator.userLanguage];
+  var root = getRoot();
+  if (root.navigator) {
+    return root.navigator.languages || [root.navigator.language || root.navigator.userLanguage];
   } else {
     return [];
   }

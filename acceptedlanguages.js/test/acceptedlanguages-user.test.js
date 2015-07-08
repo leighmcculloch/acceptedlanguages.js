@@ -1,15 +1,25 @@
-var mockWindow = {};
-define('languages-window', function() { return mockWindow; });
+define([
+  'acceptedlanguages-root',
+  'acceptedlanguages-user'
+], function(root, user){
 
-define(['languages-user'], function(user){
+  var mockRoot = {};
 
-  describe('languages-util', function() {
+  beforeEach(function() {
+    root.setRoot(mockRoot);
+  });
+
+  afterEach(function() {
+    root.setRoot(this);
+  });
+
+  describe('acceptedlanguages-util', function() {
 
     describe('.accepted', function() {
 
       describe('navigator defines languages', function() {
         beforeEach(function() {
-          mockWindow.navigator = {
+          mockRoot.navigator = {
             languages: ['en-AU', 'en', 'jp']
           }
         });
@@ -21,7 +31,7 @@ define(['languages-user'], function(user){
 
       describe('navigator defines language', function() {
         beforeEach(function() {
-          mockWindow.navigator = {
+          mockRoot.navigator = {
             language: 'en-AU'
           }
         });
@@ -33,7 +43,7 @@ define(['languages-user'], function(user){
 
       describe('navigator defines userLanguage', function() {
         beforeEach(function() {
-          mockWindow.navigator = {
+          mockRoot.navigator = {
             userLanguage: 'en-AU'
           }
         });
