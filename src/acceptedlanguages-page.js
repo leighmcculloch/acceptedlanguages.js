@@ -1,5 +1,11 @@
 import * as rooter from 'acceptedlanguages-root';
 
+export function getCurrentLanguage() {
+  var root = rooter.getRoot();
+  var html = root.document.querySelector('html');
+  return html.getAttribute('lang');
+};
+
 export function getAlternateLanguages() {
   var root = rooter.getRoot();
   var links = root.document.querySelector('head').querySelectorAll('link[rel="alternate"]');
