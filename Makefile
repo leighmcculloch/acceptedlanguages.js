@@ -4,7 +4,9 @@ install:
 
 build:
 	${CURDIR}/node_modules/.bin/webpack
-	${CURDIR}/node_modules/.bin/webpack --optimize-minimize --output-file=acceptedlanguages.min.js
+
+build-release:
+	${CURDIR}/node_modules/.bin/webpack --optimize-minimize --output-file=[name].min.js
 
 watch:
 	${CURDIR}/node_modules/.bin/webpack --watch
