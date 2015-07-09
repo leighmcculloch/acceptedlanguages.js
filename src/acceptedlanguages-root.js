@@ -1,6 +1,6 @@
-var root = this;
+var root = window;
 
-export default function getRoot() {
+export function getRoot() {
   return root;
 };
 

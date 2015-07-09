@@ -1,7 +1,7 @@
-import getRoot from 'acceptedlanguages-root';
+import * as rooter from 'acceptedlanguages-root';
 
 export function getAlternateLanguages() {
-  var root = getRoot();
+  var root = rooter.getRoot();
   var links = root.document.querySelector('head').querySelectorAll('link[rel="alternate"]');
   var hreflangs = [];
   for (var i = 0; i < links.length; i++) {
