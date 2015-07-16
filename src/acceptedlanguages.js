@@ -4,6 +4,7 @@ import * as page from 'acceptedlanguages-page';
 import * as relevant from 'acceptedlanguages-relevant';
 
 export default {
+  current: page.getCurrentLanguage(),
   accepted: user.getAcceptedLanguages(),
   acceptedExpanded: util.expandLanguages(user.getAcceptedLanguages()),
   alternate: page.getAlternateLanguages(),

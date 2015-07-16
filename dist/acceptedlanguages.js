@@ -79,6 +79,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var relevant = _interopRequireWildcard(_acceptedlanguagesRelevant);
 
 	exports['default'] = {
+	  current: page.getCurrentLanguage(),
 	  accepted: user.getAcceptedLanguages(),
 	  acceptedExpanded: util.expandLanguages(user.getAcceptedLanguages()),
 	  alternate: page.getAlternateLanguages(),
@@ -123,17 +124,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.getAcceptedLanguages = getAcceptedLanguages;
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 
 	var _acceptedlanguagesRoot = __webpack_require__(3);
 
-	var _acceptedlanguagesRoot2 = _interopRequireDefault(_acceptedlanguagesRoot);
+	var rooter = _interopRequireWildcard(_acceptedlanguagesRoot);
 
 	function getAcceptedLanguages() {
 	  // navigator.languages:    Chrome & FF
 	  // navigator.language:     Safari & Others
 	  // navigator.userLanguage: IE & Others
-	  var root = (0, _acceptedlanguagesRoot2['default'])();
+	  var root = rooter.getRoot();
 	  if (root.navigator) {
 	    return root.navigator.languages || [root.navigator.language || root.navigator.userLanguage];
 	  } else {
@@ -152,9 +153,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports["default"] = getRoot;
+	exports.getRoot = getRoot;
 	exports.setRoot = setRoot;
-	var root = undefined;
+	var root = window;
 
 	function getRoot() {
 	  return root;
@@ -175,16 +176,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
+	exports.getCurrentLanguage = getCurrentLanguage;
 	exports.getAlternateLanguages = getAlternateLanguages;
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 
 	var _acceptedlanguagesRoot = __webpack_require__(3);
 
-	var _acceptedlanguagesRoot2 = _interopRequireDefault(_acceptedlanguagesRoot);
+	var rooter = _interopRequireWildcard(_acceptedlanguagesRoot);
+
+	function getCurrentLanguage() {
+	  var root = rooter.getRoot();
+	  var html = root.document.querySelector('html');
+	  return html.getAttribute('lang');
+	}
+
+	;
 
 	function getAlternateLanguages() {
-	  var root = (0, _acceptedlanguagesRoot2['default'])();
+	  var root = rooter.getRoot();
 	  var links = root.document.querySelector('head').querySelectorAll('link[rel="alternate"]');
 	  var hreflangs = [];
 	  for (var i = 0; i < links.length; i++) {
