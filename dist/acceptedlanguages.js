@@ -79,6 +79,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	var relevant = _interopRequireWildcard(_acceptedlanguagesRelevant);
 
 	exports['default'] = {
+	  lib: {
+	    util: util,
+	    user: user,
+	    page: page,
+	    relevant: relevant
+	  },
 	  current: page.getCurrentLanguage(),
 	  accepted: user.getAcceptedLanguages(),
 	  acceptedExpanded: util.expandLanguages(user.getAcceptedLanguages()),
