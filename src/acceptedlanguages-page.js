@@ -20,14 +20,18 @@ export function getAlternateLanguages() {
   return hreflangs;
 };
 
-export function getHrefForLanguage(language) {
+export function getLinkForLanguage(language) {
   var root = rooter.getRoot();
   var link = root.document.querySelector('head').querySelector('link[rel="alternate"][hreflang="' + language + '"]');
+  return link;
+};
+
+export function getHrefForLanguage(language) {
+  var link = getLinkForLanguage(language);
   return link.getAttribute('href');
 };
 
 export function getNameForLanguage(language) {
-  var root = rooter.getRoot();
-  var link = root.document.querySelector('head').querySelector('link[rel="alternate"][hreflang="' + language + '"]');
+  var link = getLinkForLanguage(language);
   return link.getAttribute('data-lang-name');
 };

@@ -184,6 +184,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.getCurrentLanguage = getCurrentLanguage;
 	exports.getAlternateLanguages = getAlternateLanguages;
+	exports.getLinkForLanguage = getLinkForLanguage;
 	exports.getHrefForLanguage = getHrefForLanguage;
 	exports.getNameForLanguage = getNameForLanguage;
 
@@ -217,17 +218,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	;
 
-	function getHrefForLanguage(language) {
+	function getLinkForLanguage(language) {
 	  var root = rooter.getRoot();
 	  var link = root.document.querySelector('head').querySelector('link[rel="alternate"][hreflang="' + language + '"]');
+	  return link;
+	}
+
+	;
+
+	function getHrefForLanguage(language) {
+	  var link = getLinkForLanguage(language);
 	  return link.getAttribute('href');
 	}
 
 	;
 
 	function getNameForLanguage(language) {
-	  var root = rooter.getRoot();
-	  var link = root.document.querySelector('head').querySelector('link[rel="alternate"][hreflang="' + language + '"]');
+	  var link = getLinkForLanguage(language);
 	  return link.getAttribute('data-lang-name');
 	}
 
