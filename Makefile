@@ -6,7 +6,7 @@ build:
 	${CURDIR}/node_modules/.bin/webpack
 
 build-release:
-	${CURDIR}/node_modules/.bin/webpack --optimize-minimize --output-file=[name].min.js
+	${CURDIR}/node_modules/.bin/webpack --config=webpack.config.min.js
 
 watch:
 	${CURDIR}/node_modules/.bin/webpack --watch
