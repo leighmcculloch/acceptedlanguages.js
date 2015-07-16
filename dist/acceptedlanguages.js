@@ -185,6 +185,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.getCurrentLanguage = getCurrentLanguage;
 	exports.getAlternateLanguages = getAlternateLanguages;
 	exports.getHrefForLanguage = getHrefForLanguage;
+	exports.getNameForLanguage = getNameForLanguage;
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 
@@ -220,6 +221,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var root = rooter.getRoot();
 	  var link = root.document.querySelector('head').querySelector('link[rel="alternate"][hreflang="' + language + '"]');
 	  return link.getAttribute('href');
+	}
+
+	;
+
+	function getNameForLanguage(language) {
+	  var root = rooter.getRoot();
+	  var link = root.document.querySelector('head').querySelector('link[rel="alternate"][hreflang="' + language + '"]');
+	  return link.getAttribute('data-lang-name');
 	}
 
 	;

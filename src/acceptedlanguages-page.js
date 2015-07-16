@@ -25,3 +25,9 @@ export function getHrefForLanguage(language) {
   var link = root.document.querySelector('head').querySelector('link[rel="alternate"][hreflang="' + language + '"]');
   return link.getAttribute('href');
 };
+
+export function getNameForLanguage(language) {
+  var root = rooter.getRoot();
+  var link = root.document.querySelector('head').querySelector('link[rel="alternate"][hreflang="' + language + '"]');
+  return link.getAttribute('data-lang-name');
+};
