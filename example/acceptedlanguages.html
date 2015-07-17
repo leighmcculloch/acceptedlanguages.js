@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>acceptedlanguages.js example</title>
+
+  <link rel="alternate" hreflang="pt-BR" href="acceptedlanguages.html" />
+  <link rel="alternate" hreflang="es" href="acceptedlanguages.es.html" />
+  <link rel="alternate" hreflang="en-AU" href="acceptedlanguages.en.html" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="text/javascript" src="../dist/acceptedlanguages.js" async="defer"></script>
+</head>
+<body>
+
+  <p>The acceptedlanguages library contains utility properties that will expose to you the users accepted langauges, the pages current language, it's alternative languages, and the alternate languages that are relevant to the visitor. Change your browsers accepted/preferred languages to see how the following properties change.</p>
+
+  <p>Accepted Languages: <span id="accepted"></span></p>
+  <p>Current Language: <span id="current"></span></p>
+  <p>Alternate Languages: <span id="alternate"></span></p>
+  <p>Relevant Languages: <span id="relevant"></span></p>
+
+  <script type="text/javascript">
+    window.onload = function() {
+      document.getElementById('current').innerHTML = acceptedlanguages.current;
+      document.getElementById('accepted').innerHTML = acceptedlanguages.accepted;
+      document.getElementById('alternate').innerHTML = acceptedlanguages.alternate;
+      document.getElementById('relevant').innerHTML = acceptedlanguages.relevant;
+    };
+  </script>
+
+</body>
+</html>
