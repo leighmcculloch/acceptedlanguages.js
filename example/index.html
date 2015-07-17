@@ -8,14 +8,23 @@
   <link rel="alternate" hreflang="es" href="index.es.html" />
   <link rel="alternate" hreflang="en-AU" href="index.en.html" />
 
-  <script type="text/javascript" src="../dist/acceptedlanguages.js"></script>
+  <script type="text/javascript" src="../dist/acceptedlanguages.js" async="defer"></script>
 </head>
 <body>
 
-  <p>Current Language: <script>document.write(acceptedlanguages.current)</script></p>
-  <p>Accepted Languages: <script>document.write(acceptedlanguages.accepted)</script></p>
-  <p>Alternate Languages: <script>document.write(acceptedlanguages.alternate)</script></p>
-  <p>Relevant Languages: <script>document.write(acceptedlanguages.relevant)</script></p>
+  <p>Current Language: <span id="current"></span>
+  <p>Accepted Languages: <span id="accepted"></span>
+  <p>Alternate Languages: <span id="alternate"></span>
+  <p>Relevant Languages: <span id="relevant"></span>
+
+  <script type="text/javascript">
+    window.onload = function() {
+      document.getElementById('current').innerHTML = acceptedlanguages.current;
+      document.getElementById('accepted').innerHTML = acceptedlanguages.accepted;
+      document.getElementById('alternate').innerHTML = acceptedlanguages.alternate;
+      document.getElementById('relevant').innerHTML = acceptedlanguages.relevant;
+    };
+  </script>
 
 </body>
 </html>
