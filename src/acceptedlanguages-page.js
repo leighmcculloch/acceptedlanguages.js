@@ -30,8 +30,3 @@ export function getHrefForLanguage(language) {
   var link = getLinkForLanguage(language);
   return link.getAttribute('href');
 };
-
-export function getNameForLanguage(language) {
-  var link = getLinkForLanguage(language);
-  return link.getAttribute('data-lang-name');
-};
