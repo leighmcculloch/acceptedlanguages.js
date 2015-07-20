@@ -1,8 +1,8 @@
 {
   "name": "acceptedlanguages",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A simple JavaScript library that tells you the accepted languages of the visitor configured in their browser, and the languages relevant given the languages that the current page is alternatively available in.",
-  "main": "acceptedlanguages.js",
+  "main": "dist/acceptedlanguages.js",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start --single-run"
   },
