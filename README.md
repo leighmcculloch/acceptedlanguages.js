@@ -9,7 +9,13 @@ A simple JavaScript library that exposes the accepted languages of the visitor c
 ### Bower
 
 ```bash
-bower install acceptedlangauges
+bower install acceptedlanguages
+```
+
+### NPM
+
+```bash
+npm install acceptedlanguages --save
 ```
 
 ### Manual
