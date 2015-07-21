@@ -1,6 +1,6 @@
 {
   "name": "acceptedlanguages",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple JavaScript library that tells you the accepted languages of the visitor configured in their browser, and the languages relevant given the languages that the current page is alternatively available in.",
   "main": "dist/acceptedlanguages.js",
   "scripts": {
